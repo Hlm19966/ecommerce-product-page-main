@@ -7,5 +7,82 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="container">
+    <div class="navigation">
+      <div class="navbar-left">
+        <img src="images/icon-menu.svg" alt="icon of the menu" class="icon-menu" />
+        <div class="mobile-menu">
+          <nav>
+            <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <img src="images/logo.svg" alt="icon of the logo" class="logo" />
+      </div> 
+      <div class="navbar-right">
+        <img src="images/icon-cart.svg" alt="icon of card" class="card"/>
+        <img src="images/image-avatar.png" alt="the image of user" class="avatar"/>
+      </div>
+    </div>
+    <header>
+      <section class="product-gallery-mobile">
+        <div class="main-image-container">
+          <img src="images/image-product-1.jpg" alt="Product main page" class="main-image"/>
+          <button class="prev-btn" aria-label="Pervious-image">
+            <img src="images/icon-previous.svg" alt="pervious icon"/>
+          </button>
+          <button class="nex-btn" aria-label="Next image">
+            <img src="images/icon-next.svg" alt="next icon" />
+          </button>
+        </div>
+      </section>
+
+      <section class="product-gallery-desktop">
+        <div class="main-image-container">
+          <img src="images/image-product-1.jpg" alt="product main image" class="main-image"/>
+        </div>
+        <div class="thumbnails">
+          <button class="thumbnail-btn">
+            <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="thumbnail" />
+          </button>
+          <button class="thumbnail-btn">
+            <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="thumbnail" />
+          </button>
+          <button class="thumbnail-btn">
+            <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="thumbnail" />
+          </button>
+          <button class="thumbnail-btn">
+            <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail" />
+          </button>
+        </div>
+      </section>
+    </header>
+    <main>
+      <p class="paragraph">Sneaker Company</p>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p class="main-paragraph">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="number-section">
+        <div class="discount">$125.00</div>
+        <div class="dis-amount">50%</div>
+        <div class="totall">$250.00</div>
+      </div>
+      <div class="quanity-selector">
+        <button class="decrease-btn" aria-label="Decrease quanity">
+          <img src="images/icon-minus.svg" alt="Minus icon" />
+        </button>
+        <span class="quanity">0</span>
+        <button class="increase-btn" aria-label="Increase quantity">
+          <img src="images/icon-plus.svg" alt="Plus icon" />
+      </div>
+    </main>
+  </div>
 </body>
 </html>
