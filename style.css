@@ -56,7 +56,7 @@ body {
     font-family:  "Kumbh Sans", sans-serif;
 }
 
-/*.container {
+.container {
     max-width: 23.438rem;
     display: flex;
     flex-direction: column;
@@ -66,3 +66,62 @@ body {
 }
 
 /*End of the body and container*/
+
+/*navigation*/ 
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin: 20px 0;
+}
+
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-right {
+    gap: 21px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    width: 19rem;
+    height: 100%;
+    background-color: var(--White);
+    height: auto;
+    left: -100%;
+    box-shadow: -60px 0 100px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+li {
+    margin-bottom: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Black);
+    font-weight: 600;
+}
