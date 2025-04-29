@@ -73,46 +73,51 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
-    margin: 20px 0;
+    gap: 5rem;
+    margin: 1.25rem 0;
 }
 
 
 .navbar-left, .navbar-right {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 1.125rem;
 }
 
 .navbar-right {
-    gap: 21px;
+    gap: 1.313rem;
+}
+
+.card {
+    cursor: pointer;
 }
 
 .avatar {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
 }
 
 
 .mobile-menu {
     position: fixed;
     top: 0;
-    width: 20rem;
-    height: 100%;
+    width: 17rem;
     background-color: var(--White);
-    height: auto;
+    height: 100%;
     left: -100%;
-    box-shadow: -60px 0 100px rgba(0, 0, 0, 0.5);
+    
     transition: left 0.3s ease;
     z-index: 999;
 }
 
 .mobile-menu.active {
     left: 0;
+    transition: left 0.3s ease;
 }
 
 .close-icon {
-    margin: 20px 0 42px 40px;
+    margin: 1.25rem 0 2.625rem 2.5rem;
     cursor: pointer;
 }
 
@@ -122,11 +127,12 @@ body {
 
 ul {
     list-style: none;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 li {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
+    cursor: pointer;
 }
 
 a {
@@ -145,26 +151,135 @@ a {
 
 .main-image-container {
     position: relative;
+    margin: 8px 0 20px 0;
 }
 
-.prev-btn, .nex-btn {
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--White);
     border-radius: 50%;
     border: none;
-    padding: 12px 15px;
+    padding: 0.75rem 0.938rem;
+    cursor: pointer;
 }
 
 .prev-btn {
-    left: 10px;
+    left: 0.625rem;
 }
 
-.nex-btn {
-    right: 10px;
+.next-btn {
+    right: 0.625rem;
 }
 
 .icon-next, .icon-previous {
-    width: 12px;
+    width: 0.75rem;
 }
+
+/*main*/
+
+main {
+    padding: 5px 20px;
+}
+
+.paragraph {
+    color: var(--Dark-grayish-blue);
+    font-weight: 600;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+h1 {
+    margin: 10px 0;
+    color: var(--Very-dark-blue);
+}
+
+.main-paragraph {
+    color: var(--Dark-grayish-blue);
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.number-section {
+    display: flex;
+    margin: 25px 0;
+}
+
+.discount {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+
+.dis-amount-wrapper {
+   padding: 7px 13px;
+   margin-left: 13px;
+   border-radius: 8px;
+   background-color: black;
+}
+
+.dis-amount {
+   color: var(--White);
+   
+}
+
+.totall {
+    margin-left: auto;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.quantity-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    font-weight: 600;
+    background-color: var(--Light-grayish-blue);
+    padding: 16px 30px;
+    border: none;
+    border-radius: 11px;
+    margin: 10px 0;
+}
+
+.decrease-btn, .increase-btn {
+    border: none;
+    background-color: var(--Light-grayish-blue);
+    margin-left: -16px;
+    margin-right: -16px;
+    cursor: pointer;
+}
+
+
+
+.card-btn {
+    display: block;
+    width: 98%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+    background-color: var(--Orange);
+    padding: 16px 30px;
+    border: none;
+    border-radius: 11px;
+    margin: 18px 0;
+    cursor: pointer;
+    
+}
+
+.card-btn:hover {
+    background-color: var(--Pale-orange);
+}
+
+
+.card-icon {
+    display: inline;
+    margin-right: 15px;
+    margin-top: 2px;
+    filter: grayscale(100%) brightness(45%);
+    width: 18px;
+}
+
