@@ -98,6 +98,11 @@ body {
     cursor: pointer;
 }
 
+.avatar:hover {
+    border: 2px solid var(--Orange);
+    border-radius: 50%;
+}
+
 
 .mobile-menu {
     position: fixed;
@@ -209,16 +214,19 @@ h1 {
 }
 
 .discount {
-    font-size: 26px;
+    font-size: 29px;
     font-weight: 700;
     color: var(--Very-dark-blue);
 }
 
 .dis-amount-wrapper {
-   padding: 7px 13px;
-   margin-left: 13px;
+   padding: 2px 9px;
+   margin-left: 14px;
+   margin-top: 8px;
    border-radius: 8px;
-   background-color: black;
+   background-color: var(--Black);
+   height: 26px;
+
 }
 
 .dis-amount {
@@ -231,6 +239,7 @@ h1 {
     color: var(--Dark-grayish-blue);
     text-decoration: line-through;
     font-weight: 600;
+    margin-top: 5px;
 }
 
 .quantity-btn {
