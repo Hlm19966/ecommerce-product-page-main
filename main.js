@@ -7,9 +7,13 @@ const mainImage = document.querySelector(".main-image");
 const increaseBtn = document.querySelector(".increase-btn");
 const decreaseBtn = document.querySelector(".decrease-btn");
 const quantity = document.querySelector(".quantity");
-
-
-
+const quantityBtn = document.querySelector(".quantity-btn");
+const cardBtn = document.querySelector(".card-btn");
+const productNumber = document.querySelector(".product-number");
+const cartSectionEmpty = document.getElementById("cartSection");
+const cartSectionBuy = document.getElementById("cartSectionBuy");
+const userNumber = document.getElementById("number");
+const totallAmount = document.getElementById("totallAmount");
 
 
 /*next and previous button in mobile side*/ 
@@ -62,8 +66,42 @@ closeIcon.addEventListener("click", ()=> {
 /*decrease increase btn*/ 
 
 increaseBtn.addEventListener ("click", ()=> {
-  let currentValue = parseInt(quantity.innerHtml);
+  let currentValue = parseInt(quantity.textContent) + 1;
   console.log(currentValue);
-  
-  currentValue.innerHtml =  currentValue + 1;
+  quantity.innerHTML = currentValue;
 });
+
+
+decreaseBtn.addEventListener("click", ()=> {
+    let currentValue = parseInt(quantity.textContent.trim()) - 1;
+    if (currentValue > 0) {
+        currentValue = 0;
+    }
+    quantity.innerHTML = currentValue;
+});
+
+/*card btn*/ 
+
+cardBtn.addEventListener("click", ()=> {
+    function getQuantity() {
+        let selectedQuantity = quantity.innerHTML;
+        console.log(selectedQuantity);
+    }
+    getQuantity();
+   productNumber.innerHTML =  quantity.innerHTML;
+});
+
+
+productNumber.addEventListener("click",()=> {
+    let showCart = parseInt(quantity.innerHTML);
+    console.log(showCart);
+    if (showCart === 0) {
+        cartSectionEmpty.style.display = "block";
+    } else {
+        cartSectionBuy.style.display = "block";
+        userNumber.textContent =  quantity.innerHTML;
+        totallAmount.textContent = Number(quantity.innerHTML) * 125;
+
+    }
+});
+

@@ -26,12 +26,28 @@
         <img src="images/logo.svg" alt="icon of the logo" class="logo" />
       </div> 
       <div class="navbar-right">
-        <img src="images/icon-cart.svg" alt="icon of card" class="card"/>
+        <img src="images/icon-cart.svg" alt="icon of card" class="card"/><span class="product-number"></span>
+        <div class="cart-section" aria-live="polite" id="cartSection">
+          <div class="cart">Cart</div>
+          <hr />
+          <p class="cart-paragraph">Your cart is empty.</p>
+        </div>
+        <div class="cart-section-buy" aria-live="polite" id="cartSectionBuy">
+          <div class="cart">Cart</div>
+          <hr />
+          <div class="cart-inside">
+            <img src="images/image-product-1-thumbnail.jpg" alt="product image" class="product-image" />
+            <p>Fall Limited Edition Sneakers $125.00 x<span id="number"> </span><span id="totallAmount" class="totallamount"> $</span> </p>
+            <img src="images/icon-delete.svg" alt="delete icon" class="icon-delete" />
+          </div>
+          <button class="cheak-out-btn">Cheakout</button>
+        </div>
         <img src="images/image-avatar.png" alt="the image of user" class="avatar"/>
       </div>
     </div>
     <header>
       <section class="product-gallery-mobile">
+       
         <div class="main-image-container">
           <img src="images/image-product-1.jpg" alt="Product main page" class="main-image"/>
           <button class="prev-btn" aria-label="Pervious-image">
