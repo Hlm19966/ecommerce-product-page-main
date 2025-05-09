@@ -14,6 +14,7 @@ const cartSectionEmpty = document.getElementById("cartSection");
 const cartSectionBuy = document.getElementById("cartSectionBuy");
 const userNumber = document.getElementById("number");
 const totallAmount = document.getElementById("totallAmount");
+const iconDelete = document.querySelector(".icon-delete");
 
 
 /*next and previous button in mobile side*/ 
@@ -100,8 +101,14 @@ productNumber.addEventListener("click",()=> {
     } else {
         cartSectionBuy.style.display = "block";
         userNumber.textContent =  quantity.innerHTML;
-        totallAmount.textContent = Number(quantity.innerHTML) * 125;
+        totallAmount.textContent = `$${Number(quantity.innerHTML) * 125}`;
 
     }
+});
+
+
+
+iconDelete.addEventListener ("click", ()=> {
+    cartSectionBuy.style.display = "none";
 });
 
