@@ -101,7 +101,7 @@ productNumber.addEventListener("click",()=> {
     } else {
         cartSectionBuy.style.display = "block";
         userNumber.textContent =  quantity.innerHTML;
-        totallAmount.textContent = `$${Number(quantity.innerHTML) * 125}`;
+        totallAmount.textContent = `$${(Number(quantity.innerHTML) * 125).toFixed(2)}`;
 
     }
 });

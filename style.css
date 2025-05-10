@@ -169,7 +169,6 @@ hr {
 
 
 .product-number {
-    
     position: absolute;
     background-color: var(--Orange);
     color: var(--White);
@@ -377,3 +376,78 @@ h1 {
     width: 18px;
 }
 
+/*End of the main*/
+
+
+@media only screen and (min-width: 80rem) {
+    
+    .container  {
+        max-width: 80rem;
+        display: grid;
+        width: 95%;
+    }
+    
+    .mobile-menu {
+        position: static;
+        left: 0;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .logo-nav {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 138px 1fr;
+        gap: 10px;
+    }
+
+    .logo {
+       grid-column: 1/2;
+       grid-row: 1/2;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2.938rem;
+        font-size: 1.1rem;
+    }
+
+    li {
+        margin-bottom: 0px;
+    }
+
+    a {
+        color: var(--Dark-grayish-blue);
+        font-weight: 400;
+        opacity: 0.85;
+    }
+
+    .avatar {
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-left: 18px;
+    }
+    
+
+
+
+
+    .content-wraper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        margin: 5rem 0;
+    }
+
+   
+} 
