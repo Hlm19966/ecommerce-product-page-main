@@ -282,6 +282,10 @@ li a:hover::after {
     width: 0.75rem;
 }
 
+.lightbox {
+    display: none;
+}
+
 /*main*/
 
 main {
@@ -469,6 +473,35 @@ h1 {
         gap: 6rem;
         margin: 5rem 0;
     }
+
+    .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .lightbox-content {
+        width: 500px;
+        position: relative;
+    }
+
+    .icon-close {
+        position: absolute;
+        top: -3rem;
+        right: 0rem;
+        width: 22px;
+        filter: brightness(245%);
+    }
+
+
 
     /*header*/ 
 

@@ -17,6 +17,8 @@ const totallAmount = document.getElementById("totallAmount");
 const iconDelete = document.querySelector(".icon-delete");
 const thumbnails = document.querySelectorAll(".thumbnail");
 const mainImageDes = document.getElementById("mainImage");
+const lightBox = document.getElementById("lightBox");
+const iconClose = document.querySelector(".icon-close");
 
 
 /*next and previous button in mobile side*/ 
@@ -122,4 +124,15 @@ thumbnails.forEach((thumb) => {
 
      mainImageDes.src = thumb.src.replace("-thumbnail", "");
     });
+    
 })
+
+
+
+ mainImageDes.addEventListener("click", ()=> {
+    lightBox.classList.add("active");
+});
+
+iconClose.addEventListener("click", ()=> {
+    lightBox.classList.remove("active");
+});
