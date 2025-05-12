@@ -15,6 +15,8 @@ const cartSectionBuy = document.getElementById("cartSectionBuy");
 const userNumber = document.getElementById("number");
 const totallAmount = document.getElementById("totallAmount");
 const iconDelete = document.querySelector(".icon-delete");
+const thumbnails = document.querySelectorAll(".thumbnail");
+const mainImageDes = document.getElementById("mainImage");
 
 
 /*next and previous button in mobile side*/ 
@@ -75,9 +77,6 @@ increaseBtn.addEventListener ("click", ()=> {
 
 decreaseBtn.addEventListener("click", ()=> {
     let currentValue = parseInt(quantity.textContent.trim()) - 1;
-    if (currentValue > 0) {
-        currentValue = 0;
-    }
     quantity.innerHTML = currentValue;
 });
 
@@ -112,3 +111,15 @@ iconDelete.addEventListener ("click", ()=> {
     cartSectionBuy.style.display = "none";
 });
 
+
+
+/*thnmbnail in desktop*/
+
+thumbnails.forEach((thumb) => {
+    thumb.addEventListener("click", ()=> {
+     thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+     thumb.classList.add("active");
+
+     mainImageDes.src = thumb.src.replace("-thumbnail", "");
+    });
+})

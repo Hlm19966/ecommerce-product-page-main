@@ -230,6 +230,22 @@ a {
     font-weight: 600;
 }
 
+
+li a::after {
+    content: "";
+    position: absolute;
+    color: var(--Orange);
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
 /*End of the navigation*/
 
 /*header*/
@@ -269,7 +285,7 @@ a {
 /*main*/
 
 main {
-    padding: 5px 20px;
+    padding: 0.313rem 1.25rem;
 }
 
 .paragraph {
@@ -277,7 +293,7 @@ main {
     font-weight: 600;
     text-transform:uppercase;
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 0.813rem;
 }
 
 h1 {
@@ -288,7 +304,7 @@ h1 {
 
 .main-paragraph {
     color: var(--Dark-grayish-blue);
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.7;
     font-weight: 400;
 }
@@ -325,7 +341,7 @@ h1 {
     color: var(--Dark-grayish-blue);
     text-decoration: line-through;
     font-weight: 600;
-    margin-top: 5px;
+    margin-top: 0.313rem;
 }
 
 .quantity-btn {
@@ -334,21 +350,19 @@ h1 {
     width: 98%;
     font-weight: 600;
     background-color: var(--Light-grayish-blue);
-    padding: 16px 30px;
+    padding: 1rem 1.875rem;
     border: none;
-    border-radius: 11px;
-    margin: 10px 0;
+    border-radius: 0.688rem;
+    margin: 0.625rem 0;
 }
 
 .decrease-btn, .increase-btn {
     border: none;
     background-color: var(--Light-grayish-blue);
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -1rem;
+    margin-right: -1rem;
     cursor: pointer;
 }
-
-
 
 .card-btn {
     display: block;
@@ -357,10 +371,10 @@ h1 {
     font-weight: 700;
     color: var(--Very-dark-blue);
     background-color: var(--Orange);
-    padding: 16px 30px;
+    padding: 1rem 1.875rem;
     border: none;
-    border-radius: 11px;
-    margin: 18px 0;
+    border-radius: 0.688rem;
+    margin: 1.125rem 0;
     cursor: pointer;
     
 }
@@ -372,10 +386,10 @@ h1 {
 
 .card-icon {
     display: inline;
-    margin-right: 15px;
-    margin-top: 2px;
+    margin-right: 0.938rem;
+    margin-top: 0.125rem;
     filter: grayscale(100%) brightness(45%);
-    width: 18px;
+    width: 1.125rem;
 }
 
 /*End of the main*/
@@ -426,13 +440,16 @@ h1 {
 
     li {
         margin-bottom: 0px;
+        position: relative;
     }
+
 
     a {
         color: var(--Dark-grayish-blue);
         font-weight: 400;
         opacity: 0.85;
     }
+
 
     .avatar {
         width: 3rem;
@@ -453,13 +470,39 @@ h1 {
         margin: 5rem 0;
     }
 
-/*header*/ 
+    /*header*/ 
 
+.product-gallery-mobile {
+    display: none;
+}
 
+.product-gallery-desktop {
+    display: block;
+}
 
+.main-image {
+    border-radius: 10px;
+}
 
+.thumbnails {
+    display: flex;
+    gap: 42px;
+}
 
+.thumbnail-btn {
+    border: none;
+    padding: 0;
+    background: none;
+}
 
+.thumbnail {
+    border-radius: 10px;
+}
+
+.thumbnail.active {
+    border: 2px solid var(--Orange);
+    opacity: 0.3;
+}
 
 
 /*main*/
@@ -470,7 +513,7 @@ h1 {
 }
 
 .main-paragraph {
-    font-size: 1.125rem;
+    font-size: 1.188rem;
     margin: 0.625rem 0;
 }
 
@@ -495,8 +538,31 @@ h1 {
 
 .quantity-selector {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
+
+.quantity-btn {
+   
+    width: 97%;
+    font-weight: 600;
+    padding: 21px 30px;
+    margin: 16px 0;
+    flex-basis: 186px;
+}
+
+.card-btn {
+
+    width: 92%;
+    font-size: 1.09rem;
+    padding: 19px 27px;
+    flex-basis: 350px;
+}
+
+.card-icon {
+    width: 19px;
+}
+
+
 
    
 } 
