@@ -195,7 +195,7 @@ hr {
     background-color: var(--White);
     height: 100%;
     left: -100%;
-    
+    box-shadow: -60px 0 100px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
     z-index: 999;
 }
@@ -380,7 +380,7 @@ h1 {
     border-radius: 0.688rem;
     margin: 1.125rem 0;
     cursor: pointer;
-    
+    box-shadow: 1px 5px 5px var(--Orange);
 }
 
 .card-btn:hover {
@@ -413,6 +413,7 @@ h1 {
     .mobile-menu {
         position: static;
         left: 0;
+        box-shadow: none;
     }
 
     .close-icon {
@@ -447,12 +448,32 @@ h1 {
         position: relative;
     }
 
-
     a {
         color: var(--Dark-grayish-blue);
         font-weight: 400;
         opacity: 0.85;
     }
+
+    li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -41px;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        opacity: 0;
+        transition: 0.3s ease-out;
+        transform: translateY(5px);
+    }
+
+    li a:hover::after {
+        background-color: var(--Orange);
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
 
 
     .avatar {
@@ -463,8 +484,10 @@ h1 {
     }
 
 
-/*End of navigation*/ 
+/*End of navigation*/
 
+
+   /*header*/ 
     .content-wraper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -499,12 +522,25 @@ h1 {
         right: 0rem;
         width: 22px;
         filter: brightness(245%);
+        cursor: pointer;
+    }
+
+    .prev-btn {
+        left: -1.375rem;
+    }
+    
+    .next-btn {
+        right: -1.375rem;
     }
 
 
+    .prev-btn, .next-btn {
+        transform: translateY(-73%);
+        padding: 1rem 1.2rem;
+    }
+    
 
-    /*header*/ 
-
+  
 .product-gallery-mobile {
     display: none;
 }
@@ -513,8 +549,9 @@ h1 {
     display: block;
 }
 
-.main-image {
+.lightbox-main {
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .thumbnails {

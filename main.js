@@ -1,8 +1,8 @@
 const mobileMenu = document.getElementById("mobileMenu");
 const iconMenu = document.getElementById("iconMenu");
 const closeIcon = document.getElementById("closeIcon");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
+const prevBtns = document.querySelectorAll(".prev-btn");
+const nextBtns = document.querySelectorAll(".next-btn");
 const mainImage = document.querySelector(".main-image");
 const increaseBtn = document.querySelector(".increase-btn");
 const decreaseBtn = document.querySelector(".decrease-btn");
@@ -19,9 +19,11 @@ const thumbnails = document.querySelectorAll(".thumbnail");
 const mainImageDes = document.getElementById("mainImage");
 const lightBox = document.getElementById("lightBox");
 const iconClose = document.querySelector(".icon-close");
+const lightboxImage = document.querySelector(".lightbox-main");
 
 
-/*next and previous button in mobile side*/ 
+
+/*next and previous button in mobile and desktop side*/ 
 
 let currentIndex = 0;  
 
@@ -35,8 +37,11 @@ const images = [
 
 function showImage(index) {
     mainImage.src = images[index];
+    lightboxImage.src = images[index];
 }
 
+
+nextBtns.forEach((nextBtn) => {
 nextBtn.addEventListener("click", ()=> {
     currentIndex = currentIndex + 1;
     if (currentIndex >= images.length) {
@@ -44,8 +49,9 @@ nextBtn.addEventListener("click", ()=> {
     }
     showImage(currentIndex);
 });
+});
 
-
+prevBtns.forEach((prevBtn) => {
 prevBtn.addEventListener("click", ()=> {
     currentIndex = currentIndex - 1;
     if (currentIndex < 0) {
@@ -53,6 +59,9 @@ prevBtn.addEventListener("click", ()=> {
     }
     showImage(currentIndex);
 });
+});
+
+
 
 
 
@@ -79,7 +88,10 @@ increaseBtn.addEventListener ("click", ()=> {
 
 decreaseBtn.addEventListener("click", ()=> {
     let currentValue = parseInt(quantity.textContent.trim()) - 1;
-    quantity.innerHTML = currentValue;
+    if (currentValue > 0) { 
+        quantity.innerHTML = currentValue;
+    }
+   
 });
 
 /*card btn*/ 
@@ -107,10 +119,12 @@ productNumber.addEventListener("click",()=> {
     }
 });
 
-
+/*delete icon*/
 
 iconDelete.addEventListener ("click", ()=> {
     cartSectionBuy.style.display = "none";
+    productNumber.innerHTML = "";
+    quantity.innerHTML = "0";
 });
 
 
@@ -123,6 +137,7 @@ thumbnails.forEach((thumb) => {
      thumb.classList.add("active");
 
      mainImageDes.src = thumb.src.replace("-thumbnail", "");
+     lightboxImage.src = thumb.src.replace("-thumbnail","");
     });
     
 })
