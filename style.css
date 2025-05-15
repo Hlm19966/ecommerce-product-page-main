@@ -517,6 +517,18 @@ h1 {
         position: relative;
     }
 
+    h2 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
     .icon-close {
         position: absolute;
         top: -3rem;
@@ -539,101 +551,105 @@ h1 {
         transform: translateY(-73%);
         padding: 1rem 1.2rem;
     }
+
+    .icon-close:hover, 
+    .prev-btn:hover,
+    .next-btn:hover {
+        filter: brightness(200%) sepia(1) hue-rotate(-100deg) saturate(5);
+    }
+
+    .product-gallery-mobile {
+        display: none;
+    }
     
-
-  
-.product-gallery-mobile {
-    display: none;
-}
-
-.product-gallery-desktop {
-    display: block;
-}
-
-.lightbox-main {
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.thumbnails {
-    display: flex;
-    gap: 42px;
-}
-
-.thumbnail-btn {
-    border: none;
-    padding: 0;
-    background: none;
-}
-
-.thumbnail {
-    border-radius: 10px;
-}
-
-.thumbnail.active {
-    border: 2px solid var(--Orange);
-    opacity: 0.3;
-}
-
-
-/*main*/
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.main-paragraph {
-    font-size: 1.188rem;
-    margin: 0.625rem 0;
-}
-
-.number-section {
-    flex-wrap: wrap;
-}
-
-.discount {
-    font-size: 2.063rem;
-}
-
-.totall {
-    flex-basis: 100%;
-}
-
-.dis-amount-wrapper {
-    padding: 0.188rem 0.563rem;
-    border-radius: 0.313rem;
-    height: 1.875rem;
-    margin-top: 0.625rem;
-}
-
-.quantity-selector {
-    display: flex;
-    gap: 0.625rem;
-}
-
-.quantity-btn {
-   
-    width: 97%;
-    font-weight: 600;
-    padding: 21px 30px;
-    margin: 16px 0;
-    flex-basis: 186px;
-}
-
-.card-btn {
-
-    width: 92%;
-    font-size: 1.09rem;
-    padding: 19px 27px;
-    flex-basis: 350px;
-}
-
-.card-icon {
-    width: 19px;
-}
-
-
-
-   
+    .product-gallery-desktop {
+        display: block;
+    }
+    
+    .lightbox-main {
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .thumbnails {
+        display: flex;
+        gap: 42px;
+    }
+    
+    .thumbnail-btn {
+        border: none;
+        padding: 0;
+        background: none;
+    }
+    
+    .thumbnail {
+        border-radius: 10px;
+        
+    }
+    
+    .thumbnail.active {
+        border: 2px solid var(--Orange);
+        opacity: 0.3;
+        transition: opacity 0.3s border0.3s ease;
+    }
+    
+    
+    /*main*/
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .main-paragraph {
+        font-size: 1.188rem;
+        margin: 0.625rem 0;
+    }
+    
+    .number-section {
+        flex-wrap: wrap;
+    }
+    
+    .discount {
+        font-size: 2.063rem;
+    }
+    
+    .totall {
+        flex-basis: 100%;
+    }
+    
+    .dis-amount-wrapper {
+        padding: 0.188rem 0.563rem;
+        border-radius: 0.313rem;
+        height: 1.875rem;
+        margin-top: 0.625rem;
+    }
+    
+    .quantity-selector {
+        display: flex;
+        gap: 0.625rem;
+    }
+    
+    .quantity-btn {
+       
+        width: 97%;
+        font-weight: 600;
+        padding: 21px 30px;
+        margin: 16px 0;
+        flex-basis: 186px;
+    }
+    
+    .card-btn {
+    
+        width: 92%;
+        font-size: 1.09rem;
+        padding: 19px 27px;
+        flex-basis: 350px;
+    }
+    
+    .card-icon {
+        width: 19px;
+    }
+        
+    
 } 
