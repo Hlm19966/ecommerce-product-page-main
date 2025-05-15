@@ -382,7 +382,7 @@ h1 {
     border-radius: 0.688rem;
     margin: 1.125rem 0;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(225, 125, 26, 0.4)
+    box-shadow: 0 6px 20px rgba(225, 125, 26, 0.4)
 }
 
 .card-btn:hover {
@@ -430,7 +430,7 @@ h1 {
         display: grid;
         align-items: center;
         grid-template-columns: 138px 1fr;
-        gap: 10px;
+        gap: 0.625rem;
     }
 
     .logo {
@@ -479,7 +479,7 @@ h1 {
         width: 3rem;
         height: 3rem;
         cursor: pointer;
-        margin-left: 18px;
+        margin-left: 1.125rem;
     }
 
 
@@ -494,6 +494,12 @@ h1 {
         align-items: center;
         gap: 6rem;
         margin: 5rem 0;
+        padding: 0 1.875rem;
+    }
+
+    .main-image {
+        border-radius: 0.813rem;
+        margin-bottom: 2rem;
     }
 
     .lightbox {
@@ -564,16 +570,17 @@ h1 {
     
     .product-gallery-desktop {
         display: block;
+        width: 550px;
     }
     
     .lightbox-main {
-        border-radius: 10px;
-        margin-bottom: 20px;
+        border-radius: 0.625rem;
+        margin-bottom: 1.25rem;
     }
     
     .thumbnails {
         display: flex;
-        gap: 42px;
+        gap: 2.625rem;
     }
     
     .thumbnail-btn {
@@ -597,8 +604,13 @@ h1 {
     /*main*/
     
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+        margin-bottom: 0.875rem;
     }
     
     .main-paragraph {
