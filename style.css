@@ -517,7 +517,7 @@ h1 {
         position: relative;
     }
 
-    h2 {
+    .sr-only {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -555,7 +555,7 @@ h1 {
     .icon-close:hover, 
     .prev-btn:hover,
     .next-btn:hover {
-        filter: brightness(200%) sepia(1) hue-rotate(-100deg) saturate(5);
+        filter: brightness(101%) sepia(100%) saturate(749%) contrast(97%);
     }
 
     .product-gallery-mobile {
